@@ -1,0 +1,16 @@
+[
+	{
+		"modid": "kaotik",
+		"name": "KaotikHack",
+		"description": "Crystalpvp Client",
+		"version": "${version}",
+		"mcversion": "${mcversion}",
+		"url": "",
+		"updateUrl": "",
+		"authorList": ["zooom69", "Venuz", "Riredi", "mamavegettahvh"],
+		"credits": "Riredi in the aesthetic part of the client and p4nda/zooom69 for the client base and code helping",
+		"logoFile": "",
+		"screenshots": [],
+		"dependencies": []
+	}
+]
