@@ -19,7 +19,7 @@ import net.minecraft.util.math.Vec3d;
 import java.awt.*;
 import java.util.HashMap;
 
-public class ModuleSkeleton extends Module {
+public class ModuleSkeleton extends Module<B> {
     public ModuleSkeleton(){super("Skeleton", "Skeleton", "Draws the player skeletons.", ModuleCategory.RENDER);}
 
     public static ValueNumber width = new ValueNumber("Width", "Width", "", 3.0, 0.5, 5.0);

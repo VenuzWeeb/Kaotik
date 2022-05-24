@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 
-public class ModuleParticles extends Module {
+public class ModuleParticles extends Module<B> {
     public ModuleParticles(){super("Particles", "Particles", "Renders fancy particles on the screen.", ModuleCategory.CLIENT);}
 
     public static ValueColor daColor = new ValueColor("Color", "Color", "", new Color(255, 255, 255));

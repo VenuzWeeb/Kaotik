@@ -17,7 +17,7 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 
-public class AutoFillHoleChing extends Module {
+public class AutoFillHoleChing extends Module<B> {
     public AutoFillHoleChing() {
         super("AutoFillHoleChing", "Auto Fill Hole Ching", "Automatically fills holes with selected blocks.", ModuleCategory.COMBAT);
     }

@@ -18,7 +18,7 @@ import net.minecraft.util.math.RayTraceResult;
 import org.lwjgl.input.Mouse;
 
 //TODO
-public class ModuleMiddleClick extends Module {
+public class ModuleMiddleClick extends Module<B> {
     public ModuleMiddleClick(){super("MiddleClick", "Middle Click", "", ModuleCategory.CLIENT);}
 
     public enum modes {

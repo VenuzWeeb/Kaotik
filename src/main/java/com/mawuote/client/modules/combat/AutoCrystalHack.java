@@ -41,7 +41,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AutoCrystalHack extends Module {
+public class AutoCrystalHack extends Module<B> {
     public AutoCrystalHack() {
         super("AutoCrystal", "Auto Crystal", "haha boom", ModuleCategory.COMBAT);
         INSTANCE = this;

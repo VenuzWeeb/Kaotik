@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ModuleESP extends Module {
+public class ModuleESP extends Module<B> {
     public ModuleESP(){super("ESP", "ESP", "Draws boxes around certain entities or events.", ModuleCategory.RENDER);}
 
     public static ValueBoolean players = new ValueBoolean("Players", "Players", "", false);

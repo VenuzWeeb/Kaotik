@@ -6,7 +6,7 @@ import com.mawuote.api.manager.value.Value;
 
 public class EventClient extends Event {
 
-    private Module module;
+    private Module<B> module;
     private Value setting;
     private int stage;
 
@@ -18,7 +18,7 @@ public class EventClient extends Event {
         this.stage = stage;
     }
 
-    public Module getModule() {
+    public Module<B> getModule() {
         return module;
     }
 

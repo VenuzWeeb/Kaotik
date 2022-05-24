@@ -7,7 +7,7 @@ import com.mawuote.api.manager.value.impl.ValueEnum;
 import net.minecraftforge.client.event.ClientChatEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class ChatMod extends Module {
+public class ChatMod extends Module<B> {
 
     public ChatMod() {
         super("ChatMod", "ChatMod", "Let's you customize your chat.", ModuleCategory.MISC);

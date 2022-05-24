@@ -6,7 +6,7 @@ import com.mawuote.api.manager.value.impl.ValueBoolean;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import net.minecraft.entity.player.EntityPlayer;
 
-public class ModuleAnimations extends Module {
+public class ModuleAnimations extends Module<B> {
     public ModuleAnimations() {
         super("Animations", "Animations", "Let's you change swing speed and other related things.", ModuleCategory.RENDER);
     }

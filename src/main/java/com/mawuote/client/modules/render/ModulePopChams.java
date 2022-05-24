@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
-public class ModulePopChams extends Module {
+public class ModulePopChams extends Module<B> {
     public ModulePopChams() {
         super("PopChams", "Pop Chams", "Renders a cham which fades out when a player pops.", ModuleCategory.RENDER);
     }

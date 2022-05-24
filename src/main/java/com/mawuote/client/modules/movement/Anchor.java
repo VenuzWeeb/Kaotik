@@ -3,14 +3,13 @@ package com.mawuote.client.modules.movement;
 import com.mawuote.api.manager.module.Module;
 import com.mawuote.api.manager.module.ModuleCategory;
 import com.mawuote.api.manager.value.impl.ValueBoolean;
-import com.mawuote.api.manager.value.impl.ValueEnum;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import com.mawuote.api.utilities.world.HoleUtils;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
-public class Anchor extends Module {
+public class Anchor extends Module<B> {
     public Anchor(){super("Anchor", "Anchor", "Automatically stops player movement when hovering a hole.", ModuleCategory.MOVEMENT);}
 
     ValueNumber height = new ValueNumber("Height", "Height", "", 3, 1, 5);

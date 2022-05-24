@@ -17,7 +17,7 @@ public class CommandValue extends Command {
 
     @Override
     public void onCommand(String[] args) {
-        Module m = Kaotik.getModuleManager().getModule(args[0]);
+        Module<B> m = Kaotik.getModuleManager().getModule(args[0]);
 
         if(m != null && args.length == 1) {
             ChatManager.printChatNotifyClient("Showing settings for " + args[0] + ": " + ChatFormatting.GRAY + "Placeholder");
@@ -28,7 +28,7 @@ public class CommandValue extends Command {
             return;
         } else if(m != null) {
             if (args[1] != null) {
-                Value v = m.getValue(args[1]);
+                Value v = m.getValue();
                 if (v == null) {
                     ChatManager.printChatNotifyClient("Unknown setting.");
                     return;

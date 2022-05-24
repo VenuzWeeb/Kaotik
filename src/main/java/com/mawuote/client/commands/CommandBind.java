@@ -17,7 +17,7 @@ public class CommandBind extends Command {
         if (args.length == 2){
             boolean found = false;
 
-            for (Module module : Kaotik.getModuleManager().getModules()){
+            for (Module<B> module : Kaotik.getModuleManager().getModules()){
                 if (module.getName().equalsIgnoreCase(args[0])){
                     module.setBind(Keyboard.getKeyIndex(args[1].toUpperCase()));
                     ChatManager.printChatNotifyClient(module.getName() + " bound to " + Keyboard.getKeyName(module.getBind()).toUpperCase());
@@ -31,7 +31,7 @@ public class CommandBind extends Command {
             }
         } else if (args.length == 1){
             if (args[0].equalsIgnoreCase("clear")){
-                for (Module module : Kaotik.getModuleManager().getModules()){
+                for (Module<B> module : Kaotik.getModuleManager().getModules()){
                     module.setBind(Keyboard.KEY_NONE);
                 }
                 ChatManager.printChatNotifyClient("Successfully cleared all binds.");

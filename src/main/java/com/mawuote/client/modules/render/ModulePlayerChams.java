@@ -7,7 +7,7 @@ import com.mawuote.api.utilities.math.TimerUtils;
 
 import java.awt.*;
 
-public class ModulePlayerChams extends Module {
+public class ModulePlayerChams extends Module<B> {
     public ModulePlayerChams(){super("PlayerChams", "Player Chams", "Draws chams on players to make them render better.", ModuleCategory.RENDER);}
 
     public enum outlineModes {

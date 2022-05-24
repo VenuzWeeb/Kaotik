@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Killsay extends Module {
+public class Killsay extends Module<B> {
     public Killsay(){
         super("Killsay", "Killsay", "Automatically sends a message in chat when you kill a player.", ModuleCategory.MISC);
         deathMessages.add("<player> tried to stop the united states legenden PML and got fuzilated in their own territory (pau no CU/pobre landia)");

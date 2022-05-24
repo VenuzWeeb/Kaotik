@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import static org.lwjgl.opengl.GL11.GL_MODELVIEW;
 import static org.lwjgl.opengl.GL11.GL_PROJECTION;
 
-public class ModuleShaderChams extends Module {
+public class ModuleShaderChams extends Module<B> {
     public ModuleShaderChams(){
         super("ShaderChams", "Shader Chams", "Draws a shader on players to make them look amazing.", ModuleCategory.RENDER);
     }

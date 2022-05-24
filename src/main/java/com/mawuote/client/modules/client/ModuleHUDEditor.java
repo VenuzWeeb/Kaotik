@@ -4,7 +4,7 @@ import com.mawuote.Kaotik;
 import com.mawuote.api.manager.module.Module;
 import com.mawuote.api.manager.module.ModuleCategory;
 
-public class ModuleHUDEditor extends Module {
+public class ModuleHUDEditor extends Module<B> {
     public ModuleHUDEditor() {
         super("HUDEditor", "HUD Editor", "The client's HUD Editor.", ModuleCategory.CLIENT);
         INSTANCE = this;

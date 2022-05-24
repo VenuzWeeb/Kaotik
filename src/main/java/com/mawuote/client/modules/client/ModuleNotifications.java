@@ -8,7 +8,7 @@ import com.mawuote.api.manager.value.impl.ValueBoolean;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import net.minecraft.client.gui.ScaledResolution;
 
-public class ModuleNotifications extends Module {
+public class ModuleNotifications extends Module<B> {
     public ModuleNotifications(){super("Notifications", "Notifications", "Renders notifications on your screen.", ModuleCategory.CLIENT);}
 
     public static ValueNumber lifetime = new ValueNumber("Lifetime", "Lifetime", "", 500, 500, 5000);

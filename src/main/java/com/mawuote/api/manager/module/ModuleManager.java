@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 
 public class ModuleManager {
     protected static final Minecraft mc = Minecraft.getMinecraft();
-    private final ArrayList<Module> modules;
+    private final ArrayList<Module<B>> modules;
 
     public ModuleManager(){
         MinecraftForge.EVENT_BUS.register(this);
@@ -101,7 +101,7 @@ public class ModuleManager {
         modules.sort(Comparator.comparing(Module::getName));
     }
 
-    public void addModule(Module module){
+    public void addModule(Module<B> module){
         try {
             for (Field field : module.getClass().getDeclaredFields()){
                 if (Value.class.isAssignableFrom(field.getType())){
@@ -121,16 +121,16 @@ public class ModuleManager {
         }
     }
 
-    public ArrayList<Module> getModules(){
+    public ArrayList<Module<B>> getModules(){
         return modules;
     }
 
-    public ArrayList<Module> getModules(ModuleCategory category){
-        return (ArrayList<Module>) modules.stream().filter(m -> m.getCategory().equals(category)).collect(Collectors.toList());
+    public ArrayList<Module<B>> getModules(ModuleCategory category){
+        return (ArrayList<Module<B>>) modules.stream().filter(m -> m.getCategory().equals(category)).collect(Collectors.toList());
     }
 
-    public Module getModule(String name) {
-        for (Module module : modules) {
+    public Module<B> getModule(String name) {
+        for (Module<B> module : modules) {
             if (module.getName().equalsIgnoreCase(name)) {
                 return module;
             }
@@ -140,7 +140,7 @@ public class ModuleManager {
     }
 
     public boolean isModuleEnabled(String name){
-        Module module = modules.stream().filter(m -> m.getName().equals(name)).findFirst().orElse(null);
+        Module<B> module = modules.stream().filter(m -> m.getName().equals(name)).findFirst().orElse(null);
         if (module != null){
             return module.isToggled();
         } else {
@@ -213,7 +213,7 @@ public class ModuleManager {
     public void onKeyInput(InputEvent.KeyInputEvent event){
         if (Keyboard.getEventKeyState()){
             if (Keyboard.getEventKey() == Keyboard.KEY_NONE) return;
-            for (Module module : modules){
+            for (Module<B> module : modules){
                 if (module.getBind() == Keyboard.getEventKey()) module.toggle();
             }
         }

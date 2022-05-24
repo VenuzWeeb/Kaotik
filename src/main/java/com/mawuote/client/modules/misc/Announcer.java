@@ -1,6 +1,5 @@
 package com.mawuote.client.modules.misc;
 
-import com.mawuote.Kaotik;
 import com.mawuote.api.manager.event.impl.network.EventPacket;
 import com.mawuote.api.manager.event.impl.player.EventPlayerDestroyBlock;
 import com.mawuote.api.manager.event.impl.player.EventPlayerJump;
@@ -21,11 +20,10 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Announcer extends Module {
+public class Announcer extends Module<B> {
 
     public Announcer(){
         super("Announcer", "Announcer", "Automatically sends messages in chat saying something that you have done.", ModuleCategory.MISC);

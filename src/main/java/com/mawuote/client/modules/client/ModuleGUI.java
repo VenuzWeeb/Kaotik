@@ -7,7 +7,7 @@ import com.mawuote.api.manager.value.impl.ValueBoolean;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import org.lwjgl.input.Keyboard;
 
-public class ModuleGUI extends Module {
+public class ModuleGUI extends Module<B> {
     public ModuleGUI(){
         super("GUI", "GUI", "The client's Click GUI.", ModuleCategory.CLIENT);
         setBind(Keyboard.KEY_RSHIFT);

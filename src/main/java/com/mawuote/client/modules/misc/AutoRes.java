@@ -6,7 +6,7 @@ import com.mawuote.api.manager.module.ModuleCategory;
 import com.mawuote.api.manager.value.impl.ValueBoolean;
 import net.minecraft.client.gui.GuiGameOver;
 
-public class AutoRes extends Module {
+public class AutoRes extends Module<B> {
 
     public AutoRes() {
         super("AutoRespawn", "Auto Respawn", "Automatically respawns you when you die.", ModuleCategory.MISC);

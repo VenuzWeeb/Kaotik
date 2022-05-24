@@ -12,11 +12,11 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ModuleComponent extends com.mawuote.client.gui.click.components.Component {
-    Module module;
+    Module<B> module;
     private final ArrayList<com.mawuote.client.gui.click.components.Component> subButtons;
     boolean open;
 
-    public ModuleComponent(Module module, int x, int y, com.mawuote.client.gui.click.components.Frame parent) {
+    public ModuleComponent(Module<B> module, int x, int y, com.mawuote.client.gui.click.components.Frame parent) {
         super(x, y, parent);
         this.module = module;
         this.subButtons = new ArrayList<>();

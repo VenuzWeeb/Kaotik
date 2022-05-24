@@ -4,13 +4,9 @@ import io.netty.util.internal.ConcurrentSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import com.mawuote.api.manager.event.impl.player.EventPlayerMove;
-import com.mawuote.api.manager.event.impl.network.EventPacket;
-import com.mawuote.api.manager.event.impl.player.EventPush;
+
 import com.mawuote.api.manager.event.impl.player.EventPlayerUpdate;
 import com.mawuote.api.manager.module.Module;
-import com.mawuote.api.utilities.entity.EntityUtils;
-import com.mawuote.api.utilities.math.TimerUtils;
 import net.minecraft.client.gui.GuiDownloadTerrain;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.Packet;
@@ -22,25 +18,35 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class TestPhase
-extends Module {
-    public Setting<Boolean> flight = this.register(new Setting<Boolean>("Flight", true));
-    public Setting<Integer> flightMode = this.register(new Setting<Integer>("FMode", 0, 0, 1));
-    public Setting<Boolean> doAntiFactor = this.register(new Setting<Boolean>("Factorize", true));
-    public Setting<Double> antiFactor = this.register(new Setting<Double>("AntiFactor", 2.5, 0.1, 3.0));
-    public Setting<Double> extraFactor = this.register(new Setting<Double>("ExtraFactor", 1.0, 0.1, 3.0));
-    public Setting<Boolean> strafeFactor = this.register(new Setting<Boolean>("StrafeFactor", true));
-    public Setting<Integer> loops = this.register(new Setting<Integer>("Loops", 1, 1, 10));
-    public Setting<Boolean> clearTeleMap = this.register(new Setting<Boolean>("ClearMap", true));
-    public Setting<Integer> mapTime = this.register(new Setting<Integer>("ClearTime", 30, 1, 500));
-    public Setting<Boolean> clearIDs = this.register(new Setting<Boolean>("ClearIDs", true));
-    public Setting<Boolean> setYaw = this.register(new Setting<Boolean>("SetYaw", true));
-    public Setting<Boolean> setID = this.register(new Setting<Boolean>("SetID", true));
-    public Setting<Boolean> setMove = this.register(new Setting<Boolean>("SetMove", false));
-    public Setting<Boolean> nocliperino = this.register(new Setting<Boolean>("NoClip", false));
-    public Setting<Boolean> sendTeleport = this.register(new Setting<Boolean>("Teleport", true));
-    public Setting<Boolean> resetID = this.register(new Setting<Boolean>("ResetID", true));
-    public Setting<Boolean> setPos = this.register(new Setting<Boolean>("SetPos", false));
-    public Setting<Boolean> invalidPacket = this.register(new Setting<Boolean>("InvalidPacket", true));
+extends Module<B> {
+    public Module<Boolean> flight = this.register(new Module<Boolean>("Flight", true));
+    public Module<Integer> flightMode = this.register(new Module<Integer>("FMode", 0, 0, 1));
+
+    private Module<Integer> register(Module<Integer> fMode) {
+        return null;
+    }
+
+    public Module<Boolean> doAntiFactor = this.register(new Module<Boolean>("Factorize", true));
+    public Module<Double> antiFactor = this.register(new Module<Double>("AntiFactor", 2.5, 0.1, 3.0));
+
+    public Module<Double> register(Module<Double> antiFactor) {
+        return null;
+    }
+
+    public Module<Double> extraFactor = this.register(new Module<Double>("ExtraFactor", 1.0, 0.1, 3.0));
+    public Module<Boolean> strafeFactor = this.register(new Module<Boolean>("StrafeFactor", true));
+    public Module<Integer> loops = this.register(new Module<Integer>("Loops", 1, 1, 10));
+    public Module<Boolean> clearTeleMap = this.register(new Module<Boolean>("ClearMap", true));
+    public Module<Integer> mapTime = this.register(new Module<Integer>("ClearTime", 30, 1, 500));
+    public Module<Boolean> clearIDs = this.register(new Module<Boolean>("ClearIDs", true));
+    public Module<Boolean> setYaw = this.register(new Module<Boolean>("SetYaw", true));
+    public Module<Boolean> setID = this.register(new Module<Boolean>("SetID", true));
+    public Module<Boolean> setMove = this.register(new Module<Boolean>("SetMove", false));
+    public Module<Boolean> nocliperino = this.register(new Module<Boolean>("NoClip", false));
+    public Module<Boolean> sendTeleport = this.register(new Module<Boolean>("Teleport", true));
+    public Module<Boolean> resetID = this.register(new Module<Boolean>("ResetID", true));
+    public Module<Boolean> setPos = this.register(new Module<Boolean>("SetPos", false));
+    public Module<Boolean> invalidPacket = this.register(new Module<Boolean>("InvalidPacket", true));
     private final Set<CPacketPlayer> packets = new ConcurrentSet();
     private final Map<Integer, IDtime> teleportmap = new ConcurrentHashMap<Integer, IDtime>();
     private int flightCounter = 0;
@@ -69,7 +75,7 @@ extends Module {
     }
 
     @SubscribeEvent
-    public void onUpdateWalkingPlayer(UpdateWalkingPlayerEvent event) {
+    public void onUpdateWalkingPlayer(EventPlayerUpdate event) {
         if (event.getStage() == 1) {
             return;
         }
@@ -90,7 +96,7 @@ extends Module {
     }
 
     @SubscribeEvent
-    public void onMove(MoveEvent event) {
+    public void onMove(EventPlayerMove event) {
         if (this.setMove.getValue().booleanValue() && this.flightCounter != 0) {
             event.setX(TestPhase.mc.player.motionX);
             event.setY(TestPhase.mc.player.motionY);
@@ -102,7 +108,7 @@ extends Module {
     }
 
     @SubscribeEvent
-    public void onPacketSend(PacketEvent.Send event) {
+    public void onPacketSend(EventPacket.Send event) {
         CPacketPlayer packet;
         if (event.getPacket() instanceof CPacketPlayer && !this.packets.remove(packet = (CPacketPlayer)event.getPacket())) {
             event.setCanceled(true);
@@ -110,7 +116,7 @@ extends Module {
     }
 
     @SubscribeEvent
-    public void onPushOutOfBlocks(PushEvent event) {
+    public void onPushOutOfBlocks(EventPush event) {
         if (event.getStage() == 1) {
             event.setCanceled(true);
         }
