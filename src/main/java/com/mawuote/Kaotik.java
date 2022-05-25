@@ -100,8 +100,8 @@ public class Kaotik {
 
     public void setWindowIcon() {
         if (Util.getOSType() != Util.EnumOS.OSX) {
-            try (InputStream inputStream16x = Minecraft.class.getResourceAsStream("/assets/mawuote/img16.png");
-                 InputStream inputStream32x = Minecraft.class.getResourceAsStream("/assets/mawuote/img32.png")) {
+            try (InputStream inputStream16x = Minecraft.class.getResourceAsStream("/assets/mawuote/icons/icon-16x.png");  // this was taken from zori 1.2.2 xD
+                 InputStream inputStream32x = Minecraft.class.getResourceAsStream("/assets/mawuote/icons/icon-32x.png")) {
                 ByteBuffer[] icons = new ByteBuffer[]{readImageToBuffer(inputStream16x), readImageToBuffer(inputStream32x)};
                 Display.setIcon(icons);
             } catch (Exception e) {
