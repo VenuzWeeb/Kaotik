@@ -20,7 +20,7 @@ public class DiscordPresence {
 
         discordRichPresence.startTimestamp = System.currentTimeMillis() / 1000L;
         discordRichPresence.details = "This is so Kaotik!";
-        discordRichPresence.largeImageKey = "kaotik";
+        discordRichPresence.largeImageKey = "kaotik continued by somesadkid";
         discordRichPresence.largeImageText = clientVersion;
         discordRichPresence.state = null;
         discordRPC.Discord_UpdatePresence(discordRichPresence);
