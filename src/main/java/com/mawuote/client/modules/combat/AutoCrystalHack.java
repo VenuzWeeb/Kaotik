@@ -63,7 +63,7 @@ public class AutoCrystalHack extends Module {
 
     private int breakTicks;
     private int placeTicks;
-
+    // BREAK SETTINGS
     public static ValueBoolean breakMode = new ValueBoolean("Break", "Break", "Breaks the crystals.", true);
     public static ValueNumber breakDelay = new ValueNumber("BreakDelay", "BreakDelay", "The delay for breaking.", 0, 0, 20);
     public static ValueNumber breakRange = new ValueNumber("BreakRange", "BreakRange", "The range for breaking.", 5.0f, 0.0f, 6.0f);
@@ -72,7 +72,7 @@ public class AutoCrystalHack extends Module {
     public static ValueBoolean inhibit = new ValueBoolean("Inhibit", "Inhibit", "Prevents an a crystal which is going to explode from being attacked again.", true);
     public static ValueBoolean sequential = new ValueBoolean("Sequential", "Sequential", "Breaks crystals when they spawn. Good for strictless servers.", true);
     public static ValueBoolean sync = new ValueBoolean("Sync", "Sync", "Syncs crystals based on sounds.", true);
-
+    // PLACE SETTINGS
     public static ValueBoolean place = new ValueBoolean("Place", "Place", "Places the crystals.", true);
     public static ValueNumber placeDelay = new ValueNumber("PlaceDelay", "PlaceDelay", "The delay for placing.", 0, 0, 20);
     public static ValueNumber placeRange = new ValueNumber("PlaceRange", "PlaceRange", "The range for placing.", 5.0f, 0.0f, 6.0f);
@@ -81,21 +81,21 @@ public class AutoCrystalHack extends Module {
     public static ValueEnum switchMode = new ValueEnum("Switch", "Switch", "Automatically switches to a crystal.", SwitchModes.None);
     public static ValueEnum multiPlace = new ValueEnum("MultiPlace", "MultiPlace", "Places in more positions than one.", MultiPlaceModes.None);
     public static ValueBoolean holePlace = new ValueBoolean("HolePlace", "HolePlace", "Places in the hole when the player jumps.", true);
-
+    // ROTATION SETTINGS
     public static ValueBoolean rotation = new ValueBoolean("Rotation", "Rotation", "Rotates to the crystal and position when placing.", false);
     public static ValueEnum timing = new ValueEnum("Timing", "Timing", "The timing for the breaking.", Timings.Break);
     public static ValueNumber targetRange = new ValueNumber("TargetRange", "TargetRange", "The range for targeting.", 15.0f, 0.0f, 30.0f);
     public static ValueEnum swing = new ValueEnum("Swing", "Swing", "The hand to swing with.", Hands.Mainhand);
     public static ValueBoolean packetSwing = new ValueBoolean("PacketSwing", "PacketSwing", "Swings serverside but not clientside.", false);
-
+    // DAMAGE SETTINGS
     public static ValueNumber minimumDamage = new ValueNumber("MinimumDamage", "MinimumDamage", "The minimum damage that is required for the target.", 6.0f, 0.0f, 36.0f);
     public static ValueNumber maxSelfDamage = new ValueNumber("MaxSelfDamage", "MaxSelfDamage", "The minimum damage that is required for the target.", 6.0f, 0.0f, 36.0f);
-
+    // FACEPLACE SETTINGS
     public static ValueBoolean facePlace = new ValueBoolean("FacePlace", "FacePlace", "Faceplaces the target when the opportunity is right.", true);
     public static ValueNumber facePlaceHealth = new ValueNumber("FacePlaceHealth", "FacePlaceHealth", "The health at which faceplacing would start.", 12.0f, 0.0f, 36.0f);
     public static ValueBoolean armorBreaker = new ValueBoolean("ArmorBreaker", "ArmorBreaker", "Starts faceplacing the enemy when their armor is low.", true);
     public static ValueNumber armorPercent = new ValueNumber("ArmorPercent", "ArmorPercent", "The percent required for the armor breaking to start.", 20, 0, 100);
-
+    // RENDER SETTINGS
     // We're using rendermodes so that we can add glide later or something else -Innards
     // We're using enums for fill and outline because I have plans to add gradient rendering and stuff -Innards
     public static ValueEnum render = new ValueEnum("Render", "Render", "Renders the current target position.", RenderModes.Normal);
