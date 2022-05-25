@@ -14,7 +14,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.network.play.client.CPacketHeldItemChange;
 import net.minecraft.util.math.BlockPos;
 
-public class FeetPlace extends Module<B> {
+public class FeetPlace extends Module {
     public FeetPlace(){super("FeetPlace", "FeetPlace", "Automatically places obsidian at the enemy's feet.", ModuleCategory.COMBAT);}
 
     public static ValueNumber enemyRange = new ValueNumber("EnemyRange", "EnemyRange", "", 5, 2, 8);

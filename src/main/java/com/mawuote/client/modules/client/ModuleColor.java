@@ -9,7 +9,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 
 import java.awt.*;
 
-public class ModuleColor extends Module<B> {
+public class ModuleColor extends Module {
 
     public ModuleColor() {
         super("Color", "Color", "Allows you to customize the client's main colors.", ModuleCategory.CLIENT, true);

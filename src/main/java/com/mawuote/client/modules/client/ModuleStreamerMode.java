@@ -21,7 +21,7 @@ import java.util.Iterator;
 
 
 //TODO
-public class ModuleStreamerMode extends Module<B> {
+public class ModuleStreamerMode extends Module {
     public ModuleStreamerMode(){super("StreamerMode", "Streamer Mode", "", ModuleCategory.CLIENT);}
 
     public static ValueBoolean hideYou = new ValueBoolean("HideIGN", "HideIGN", "", false);

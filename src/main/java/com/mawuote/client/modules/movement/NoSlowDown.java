@@ -13,7 +13,7 @@ import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.input.Keyboard;
 
-public class NoSlowDown extends Module<B> {
+public class NoSlowDown extends Module {
     public NoSlowDown(){super("NoSlowDown", "No Slow", "", ModuleCategory.MOVEMENT);}
 
     public static ValueBoolean guiMove = new ValueBoolean("GuiMove", "GuiMove", "", true);

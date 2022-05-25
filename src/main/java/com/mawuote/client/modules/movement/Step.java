@@ -5,12 +5,14 @@ import com.mawuote.api.manager.event.impl.network.EventPacket;
 import com.mawuote.api.manager.module.Module;
 import com.mawuote.api.manager.module.ModuleCategory;
 import com.mawuote.api.manager.value.impl.ValueBoolean;
+import com.mawuote.api.manager.value.impl.ValueEnum;
 import com.mawuote.api.manager.value.impl.ValueNumber;
+import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.server.SPacketPlayerPosLook;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class Step extends Module<B> {
+public class Step extends Module {
     public Step() {
         super("Stepy", "Step", "Increases your vanilla step height.", ModuleCategory.MOVEMENT);
     }

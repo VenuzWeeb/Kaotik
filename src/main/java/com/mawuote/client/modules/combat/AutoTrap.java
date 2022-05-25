@@ -17,7 +17,7 @@ import net.minecraft.util.math.Vec3d;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AutoTrap extends Module<B> {
+public class AutoTrap extends Module {
     public AutoTrap() {
         super("AutoTrap", "Auto Trap", "traps run ez", ModuleCategory.COMBAT);
     }

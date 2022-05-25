@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ModuleHoleESP extends Module<B> {
+public class ModuleHoleESP extends Module {
     public ModuleHoleESP(){super("HoleESP", "Hole ESP", "Draws an ESP on holes that you can get into.", ModuleCategory.RENDER);}
 
     public enum modes {

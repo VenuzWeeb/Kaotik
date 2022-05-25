@@ -12,7 +12,7 @@ import net.minecraft.network.play.server.SPacketPlayerPosLook;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class Speedy extends Module<B> {
+public class Speedy extends Module {
     public Speedy(){super("Speedy", "Speedy", "Fast", ModuleCategory.MOVEMENT);}
 
     public enum modes {

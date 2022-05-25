@@ -7,7 +7,7 @@ import com.mawuote.api.manager.value.impl.ValueBoolean;
 import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class ModuleNoRender extends Module<B> {
+public class ModuleNoRender extends Module {
 
     public ModuleNoRender() {
         super("NoRender", "No Render", "Prevents certain things from rendering.", ModuleCategory.RENDER);

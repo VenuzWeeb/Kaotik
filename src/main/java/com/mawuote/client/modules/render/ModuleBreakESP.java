@@ -15,7 +15,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ModuleBreakESP extends Module<B> {
+public class ModuleBreakESP extends Module {
     public ModuleBreakESP(){
         super("BreakESP", "Break ESP", "Highlights blocks which are being mined by yourself or others.", ModuleCategory.RENDER);
         this.percentMap.put(0, 10);

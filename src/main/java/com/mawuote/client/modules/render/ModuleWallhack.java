@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
 
-public class ModuleWallhack extends Module<B> {
+public class ModuleWallhack extends Module {
     public ModuleWallhack(){
         super("WallHack", "Wall Hack", "Makes blocks transparent so that you can find target blocks easily.", ModuleCategory.RENDER);
         blocks = new ArrayList<>();

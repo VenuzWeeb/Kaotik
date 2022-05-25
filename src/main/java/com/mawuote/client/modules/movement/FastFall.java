@@ -5,7 +5,7 @@ import com.mawuote.api.manager.module.ModuleCategory;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import net.minecraftforge.fml.common.Mod;
 
-public class FastFall extends Module<B> {
+public class FastFall extends Module {
 
     public FastFall() {
         super("FastFall", "Fast Fall", "falls fast", ModuleCategory.MOVEMENT);

@@ -31,7 +31,7 @@ import java.util.Objects;
 
 
 //TODO
-public class ModuleHud extends Module<B> {
+public class ModuleHud extends Module {
     public ModuleHud() {
         super("Hud", "Hud", "", ModuleCategory.CLIENT);
     }

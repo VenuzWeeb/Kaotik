@@ -53,7 +53,7 @@ public class ConfigManager {
     }
 
     public void loadModules() throws IOException {
-        for (Module<B> module : Kaotik.MODULE_MANAGER.getModules()){
+        for (Module module : Kaotik.MODULE_MANAGER.getModules()){
             if (module.getCategory().equals(ModuleCategory.HUD)) continue;
             if (!Files.exists(Paths.get("Kaotik/Modules/" + module.getCategory().getName() + "/" + module.getName() + ".json"))) continue;
 
@@ -110,7 +110,7 @@ public class ConfigManager {
     }
 
     public void saveModules() throws IOException {
-        for (Module<B> module : Kaotik.MODULE_MANAGER.getModules()){
+        for (Module module : Kaotik.MODULE_MANAGER.getModules()){
             if (module.getCategory().equals(ModuleCategory.HUD)) continue;
 
             if (Files.exists(Paths.get("Kaotik/Modules/" + module.getCategory().getName() + "/" + module.getName() + ".json"))) {

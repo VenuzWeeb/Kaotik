@@ -7,7 +7,7 @@ import com.mawuote.api.manager.value.impl.ValueEnum;
 import com.mawuote.api.manager.value.impl.ValueNumber;
 import com.mawuote.api.manager.value.impl.ValueString;
 
-public class ModuleFont extends Module<B> {
+public class ModuleFont extends Module {
     public ModuleFont() {
         super("Font", "Font", "Allows you to customize the client's font.", ModuleCategory.CLIENT);
     }

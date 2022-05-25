@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ChorusPospone extends Module<B> {
+public class ChorusPospone extends Module {
     public ChorusPospone() {
         super("ChorusPostpone", "ChorusPostpone", "", ModuleCategory.PLAYER);
     }

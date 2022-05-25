@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Queue;
 
-public class TP extends Module<B> {
+public class TP extends Module {
     public TP(){super("teleportationhack", "TP", "", ModuleCategory.MOVEMENT);}
 
     ValueNumber toggleDelay= new ValueNumber("ToggleDelay", "ToggleDelay", "", 500, 0, 2000);

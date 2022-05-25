@@ -1,13 +1,16 @@
 package com.mawuote.client.modules.movement;
 
+import com.mawuote.api.manager.event.impl.player.EventMotionUpdate;
+import com.mawuote.api.manager.event.impl.player.EventPlayerMove;
 import com.mawuote.api.manager.module.Module;
 import com.mawuote.api.manager.module.ModuleCategory;
+import com.mawuote.api.manager.value.impl.ValueBoolean;
 import com.mawuote.api.manager.value.impl.ValueEnum;
 import com.mawuote.api.utilities.entity.EntityUtils;
 import com.mawuote.api.utilities.math.MathUtils;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class Sprint extends Module<B> {
+public class Sprint extends Module {
     public Sprint() {
         super("Sprint", "Sprint", "Automatically sprints for you.", ModuleCategory.MOVEMENT);
     }

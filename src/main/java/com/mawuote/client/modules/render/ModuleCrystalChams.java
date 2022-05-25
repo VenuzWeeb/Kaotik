@@ -12,7 +12,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class ModuleCrystalChams extends Module<B> {
+public class ModuleCrystalChams extends Module {
     public ModuleCrystalChams(){super("CrystalChams", "Crystal Chams", "Renders chams over crystals to make them look better.", ModuleCategory.RENDER);}
 
     public enum modes {

@@ -10,7 +10,7 @@ import net.minecraft.client.network.NetworkPlayerInfo;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class hihowareyou extends Module<B> {
+public class hihowareyou extends Module {
     public hihowareyou(){
         super("Welcomer", "Welcomer", "", ModuleCategory.MISC);
 

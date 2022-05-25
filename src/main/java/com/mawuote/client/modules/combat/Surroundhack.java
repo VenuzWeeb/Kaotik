@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Surroundhack extends Module<B> {
+public class Surroundhack extends Module {
     public Surroundhack() {
         super("SurroundHack", "Surround", "Places blocks around your feet to protect you from crystals.", ModuleCategory.COMBAT);
     }

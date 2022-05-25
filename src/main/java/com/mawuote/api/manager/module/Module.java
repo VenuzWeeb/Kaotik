@@ -18,7 +18,7 @@ import org.lwjgl.input.Keyboard;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Module<B> {
+public class Module {
     protected static final Minecraft mc = Minecraft.getMinecraft();
     private final ArrayList<Value> values;
 
@@ -34,7 +34,7 @@ public class Module<B> {
     public final ValueBoolean drawn = new ValueBoolean("Drawn", "Drawn", "Puts the module on the array list hud component.", true);
     public final ValueBind bind = new ValueBind("Bind", "Bind", "The bind for the module.", Keyboard.KEY_NONE);
 
-    public Module(final String name, final double tag, final double description, final double category){
+    public Module(final String name, final String tag, final String description, final ModuleCategory category){
         this.name = name;
         this.tag.setValue(tag);
         this.description = description;
@@ -195,7 +195,7 @@ public class Module<B> {
         }
     }
 
-    public Value getValue() {
+    public Value getValue(String name) {
         for (Value value : values) {
             if (value.getName().equalsIgnoreCase(name)) {
                 return value;
@@ -215,9 +215,5 @@ public class Module<B> {
 
     public static Color globalColor(int alpha) {
         return new Color(ModuleColor.daColor.getValue().getRed(), ModuleColor.daColor.getValue().getGreen(), ModuleColor.daColor.getValue().getBlue(), alpha);
-    }
-
-    protected Module<Integer> register(Module<Double> antiFactor) {
-        return null;
     }
 }

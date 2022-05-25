@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ModuleLogoutSpots extends Module<B> {
+public class ModuleLogoutSpots extends Module {
     public ModuleLogoutSpots(){
         super("LogoutSpots", "Logout Spots", "Draws an ESP on logout spots from other players.", ModuleCategory.RENDER);
         spots = new CopyOnWriteArrayList<LogoutPos>();

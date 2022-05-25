@@ -34,7 +34,7 @@ public class Frame {
 
         buttons = new ArrayList<>();
         int offset = 14;
-        for (Module<B> module : Kaotik.MODULE_MANAGER.getModules(category)) {
+        for (Module module : Kaotik.MODULE_MANAGER.getModules(category)) {
             buttons.add(new ModuleComponent(module, x, y + offset, this));
             offset += 14;
         }

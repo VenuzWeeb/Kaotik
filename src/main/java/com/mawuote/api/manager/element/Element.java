@@ -10,7 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import java.util.ArrayList;
 
-public class Element extends Module<B> {
+public class Element extends Module {
     protected static final Minecraft mc = Minecraft.getMinecraft();
     private final ArrayList<Value> values;
 

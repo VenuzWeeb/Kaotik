@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Objects;
 
-public class Strafe extends Module<B> {
+public class Strafe extends Module {
     public Strafe(){super("Strafe", "Strafe", "", ModuleCategory.MOVEMENT);}
 
     private int stage = 1;

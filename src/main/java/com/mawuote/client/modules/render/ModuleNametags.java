@@ -35,7 +35,7 @@ import java.util.Objects;
  * I used wurst plus 2 nametags as base but made them better :D
  */
 
-public class ModuleNametags extends Module<B> {
+public class ModuleNametags extends Module {
     public ModuleNametags(){super("NameTags", "Name Tags", "Draws nametags on other players and yourself.", ModuleCategory.RENDER);}
     public static ValueBoolean show_armor = new ValueBoolean("Armor", "ShowArmor", "", false);
     public static ValueBoolean percent = new ValueBoolean("Percent", "Percent", "", false);

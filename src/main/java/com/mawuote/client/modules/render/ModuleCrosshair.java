@@ -13,7 +13,7 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
-public class ModuleCrosshair extends Module<B> {
+public class ModuleCrosshair extends Module {
     public ModuleCrosshair(){super("Crosshair", "Crosshair", "Renders a better looking crosshair over the vanilla Minecraft one.", ModuleCategory.RENDER);}
 
     public static ValueBoolean dynamic = new ValueBoolean("Dynamic", "Dynamic", "", false);
