@@ -29,7 +29,7 @@ public class EuropaMainMenu
         this.x = this.width / 2;
         this.y = this.height / 4 + 48;
         this.buttonList.add(new TextButton(0, this.x, this.y + 22, "Solo"));
-        this.buttonList.add(new TextButton(1, this.x, this.y + 44, "Hop in CC"));
+        this.buttonList.add(new TextButton(1, this.x, this.y + 44, "RollPacks"));
         this.buttonList.add(new TextButton(2, this.x, this.y + 66, "Options"));
         this.buttonList.add(new TextButton(2, this.x, this.y + 88, "Close Kaotik"));
         GlStateManager.disableTexture2D();
